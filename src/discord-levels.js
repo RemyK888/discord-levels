@@ -44,10 +44,10 @@ class DiscordLevels {
      * DiscordLevels.addXp('Some ID', 'Some Xp') // Number without the brackets
      */
     addXp(userID, Xp) {
-        if (!userID) {
+        if (!userID || isNaN(userID)) {
             throw new Error(this.errorMsg + 'The user ID is required.');
         };
-        if (!Xp) {
+        if (!Xp || isNaN(Xp)) {
             throw new Error(this.errorMsg + 'The Xp is required.');
         };
         return Database.addXp(userID, Xp);
@@ -61,10 +61,10 @@ class DiscordLevels {
      * DiscordLevels.removeXp('Some ID', 'Some Xp') // Number without the brackets
      */
     removeXp(userID, Xp) {
-        if (!userID) {
+        if (!userID || isNaN(userID)) {
             throw new Error(this.errorMsg + 'The user ID is required.');
         };
-        if (!Xp) {
+        if (!Xp || isNaN(Xp)) {
             throw new Error(this.errorMsg + 'The Xp is required.');
         };
         return Database.removeXp(userID, Xp);
@@ -78,10 +78,10 @@ class DiscordLevels {
      * DiscordLevels.setXp('Some ID', 'Some Xp') // Number without the brackets
      */
     setXp(userID, Xp) {
-        if (!userID) {
+        if (!userID || isNaN(userID)) {
             throw new Error(this.errorMsg + 'The user ID is required.');
         };
-        if (!Xp) {
+        if (!Xp || isNaN(Xp)) {
             throw new Error(this.errorMsg + 'The Xp is required.');
         };
         return Database.setXp(userID, Xp);
@@ -95,10 +95,10 @@ class DiscordLevels {
      * DiscordLevels.addLevel('Some ID', 'Some Level') // Number without the brackets
      */
     addLevel(userID, Level) {
-        if (!userID) {
+        if (!userID || isNaN(userID)) {
             throw new Error(this.errorMsg + 'The user ID is required.');
         };
-        if (!Level) {
+        if (!Level || isNaN(Level)) {
             throw new Error(this.errorMsg + 'The Level is required.');
         };
         return Database.addLevel(userID, Level);
@@ -112,10 +112,10 @@ class DiscordLevels {
      * DiscordLevels.removeLevel('Some ID', 'Some Level') // Number without the brackets
      */
     removeLevel(userID, Level) {
-        if (!userID) {
+        if (!userID || isNaN(userID)) {
             throw new Error(this.errorMsg + 'The user ID is required.');
         };
-        if (!Level) {
+        if (!Level || isNaN(Level)) {
             throw new Error(this.errorMsg + 'The Level is required.');
         };
         return Database.removeLevel(userID, Level);
@@ -129,10 +129,10 @@ class DiscordLevels {
      * DiscordLevels.setLevel('Some ID', 'Some Level') // Number without the brackets
      */
     setLevel(userID, Level) {
-        if (!userID) {
+        if (!userID || isNaN(userID)) {
             throw new Error(this.errorMsg + 'The user ID is required.');
         };
-        if (!Level) {
+        if (!Level || isNaN(Level)) {
             throw new Error(this.errorMsg + 'The Level is required.');
         };
         return Database.addLevel(userID, Level);
@@ -145,7 +145,7 @@ class DiscordLevels {
      * DiscordLevels.getProfile('Some ID').Level // or Xp
      */
     getProfile(userID) {
-        if (!userID) {
+        if (!userID || isNaN(userID)) {
             throw new Error(this.errorMsg + 'The user ID is required.');
         };
         return new Profile({ userID: userID });
