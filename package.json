@@ -1,6 +1,6 @@
 {
   "name": "discord-levels",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "description": "An easy way to create a level system for your Discord bot.",
   "main": "index.js",
   "scripts": {
