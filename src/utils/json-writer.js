@@ -16,7 +16,7 @@ class JsonWriter {
         this.fileName = options.fileName;
         accessFile(this.fileName, fs.F_OK)
             .catch((err) => {
-                throw new Error(this.interErrorMsg + 'An error occured while parsing the database file: ' + err);
+                throw new Error(this.interErrorMsg + 'You have to create a file named database.json in your project folder. If the error persists, contact RemyK#3876 on Discord :' + err);
             });
         this.fileContent = JSON.parse(fs.readFileSync(this.fileName));
     };
