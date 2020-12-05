@@ -23,7 +23,6 @@ const path = require('path');
 
 const Package = require('../package.json');
 const JsonWriter = require('./utils/json-writer');
-const Database = new JsonWriter({ fileName: path.join(__dirname, './database/database.json') });
 const Profile = require('./utils/profile');
 const Leaderboard = require('./utils/leaderboard');
 
@@ -50,6 +49,7 @@ class DiscordLevels {
         if (!Xp || isNaN(Xp)) {
             throw new Error(this.errorMsg + 'The Xp is required.');
         };
+        const Database = new JsonWriter({ fileName: path.join(__dirname, '../../../database.json') });
         return Database.addXp(userID, Xp);
     };
 
@@ -67,6 +67,7 @@ class DiscordLevels {
         if (!Xp || isNaN(Xp)) {
             throw new Error(this.errorMsg + 'The Xp is required.');
         };
+        const Database = new JsonWriter({ fileName: path.join(__dirname, '../../../database.json') });
         return Database.removeXp(userID, Xp);
     };
 
@@ -84,6 +85,7 @@ class DiscordLevels {
         if (!Xp || isNaN(Xp)) {
             throw new Error(this.errorMsg + 'The Xp is required.');
         };
+        const Database = new JsonWriter({ fileName: path.join(__dirname, '../../../database.json') });
         return Database.setXp(userID, Xp);
     };
 
@@ -101,6 +103,7 @@ class DiscordLevels {
         if (!Level || isNaN(Level)) {
             throw new Error(this.errorMsg + 'The Level is required.');
         };
+        const Database = new JsonWriter({ fileName: path.join(__dirname, '../../../database.json') });
         return Database.addLevel(userID, Level);
     };
 
@@ -118,6 +121,7 @@ class DiscordLevels {
         if (!Level || isNaN(Level)) {
             throw new Error(this.errorMsg + 'The Level is required.');
         };
+        const Database = new JsonWriter({ fileName: path.join(__dirname, '../../../database.json') });
         return Database.removeLevel(userID, Level);
     };
 
@@ -135,6 +139,7 @@ class DiscordLevels {
         if (!Level || isNaN(Level)) {
             throw new Error(this.errorMsg + 'The Level is required.');
         };
+        const Database = new JsonWriter({ fileName: path.join(__dirname, '../../../database.json') });
         return Database.addLevel(userID, Level);
     };
 
