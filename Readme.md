@@ -1,3 +1,6 @@
+# This respository has been archived.
+## You can use the code for your Discord bots or to code a new NPM package but you must mention the name of the author and the source, as well as his link.
+
 [![NPM](https://nodei.co/npm/discord-levels.png)](https://nodei.co/npm/discord-levels/)
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
